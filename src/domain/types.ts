@@ -1,0 +1,2 @@
+export type Reading = { sensorId: string; timeMs: number; value: number; unit: string; quality: 'good' | 'suspect' | 'bad' };
+export type Sensor = { id: string; name: string; type: 'strain' | 'acceleration' | 'displacement' | 'tilt' | 'temperature'; elementId: string; coordinate: { x: number; y: number; z: number }; unit: string; limits: { warning: number; critical: number }; status: 'online' | 'degraded' | 'offline' };

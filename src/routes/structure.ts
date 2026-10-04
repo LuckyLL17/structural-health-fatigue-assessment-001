@@ -1,0 +1,1 @@
+import type { FastifyInstance } from 'fastify'; import { elements, sensors, structures } from '../domain/state.js'; export async function registerStructureRoutes(app: FastifyInstance) { app.get('/api/structures', async () => ({ structures, elements, sensors, coordinateSystem: 'local ENU; x=east(m), y=north(m), z=up(m)' })); }
